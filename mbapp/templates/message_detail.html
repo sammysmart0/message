@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <p>{{ message.title}}</p>
+    <div>{{ message.body}}</div>
+    <p>{{ message.author}}</p>
+</div>
+
+<button><a href="{% url 'message-update' message.pk %}">Edit message</a></button>
+<button><a href="{% url 'message-delete' message.pk %}">Delete message</a></button>
+
+{% endblock content %}
